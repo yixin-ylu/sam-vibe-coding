@@ -1,0 +1,146 @@
+{
+  "_note": "Trimmed real response from the public Bluesky API (account: bsky.app) for offline use.",
+  "feed": [
+    {
+      "post": {
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.feed.post/3n25midjy722x",
+        "likeCount": 739,
+        "repostCount": 135,
+        "replyCount": 34,
+        "quoteCount": 18,
+        "indexedAt": "2026-11-12T23:24:23.272Z",
+        "record": {
+          "text": "The moderation inbox is now available to all users! Read this thread to learn more:",
+          "createdAt": "2026-11-12T23:24:22.820Z"
+        }
+      }
+    },
+    {
+      "post": {
+        "uri": "at://did:plc:wbmw5r5a2j7txv72ggne2uoe/app.bsky.feed.post/3n256cietfk2a",
+        "likeCount": 2736,
+        "repostCount": 249,
+        "replyCount": 24,
+        "quoteCount": 22,
+        "indexedAt": "2026-11-12T19:10:34.992Z",
+        "record": {
+          "text": "Outlook down Bluesky up",
+          "createdAt": "2026-11-12T19:10:34.182Z"
+        }
+      }
+    },
+    {
+      "post": {
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.feed.post/3n22yg6lg2k2f",
+        "likeCount": 2060,
+        "repostCount": 364,
+        "replyCount": 182,
+        "quoteCount": 131,
+        "indexedAt": "2026-11-11T22:20:13.482Z",
+        "record": {
+          "text": "Rolling out now: a new notifications screen.\n\nFilter by type (replies, follows, post alerts) or see only people you follow. Similar notifications are now grouped, so there’s less noise and the important ones stand out.\n\nWant more control? Head to Settings > Notifications.",
+          "createdAt": "2026-11-11T22:19:56.200Z"
+        }
+      }
+    },
+    {
+      "post": {
+        "uri": "at://did:plc:aqke2etpz2y6eo6thaooqisi/app.bsky.feed.post/3mzwfubmgms2o",
+        "likeCount": 20097,
+        "repostCount": 6966,
+        "replyCount": 188,
+        "quoteCount": 196,
+        "indexedAt": "2026-11-10T02:37:14.074Z",
+        "record": {
+          "text": "Happy circulatory system walking through the kitchen day to all who celebrate",
+          "createdAt": "2026-11-10T02:37:09.093Z"
+        }
+      }
+    },
+    {
+      "post": {
+        "uri": "at://did:plc:denuvqodvvnzxtuitumle4vs/app.bsky.feed.post/3mzxhnsbdiq2z",
+        "likeCount": 12521,
+        "repostCount": 2631,
+        "replyCount": 163,
+        "quoteCount": 196,
+        "indexedAt": "2026-11-10T12:41:59.471Z",
+        "record": {
+          "text": "This is a genuine honeypot from our collection. It has no ulterior motives. But, to be safe, please do not pass it any state secrets.",
+          "createdAt": "2026-11-10T12:41:58.892Z"
+        }
+      }
+    },
+    {
+      "post": {
+        "uri": "at://did:plc:sihpw65g5f5ptzlsu4jybz2t/app.bsky.feed.post/3mzsgbnati22w",
+        "likeCount": 9946,
+        "repostCount": 2853,
+        "replyCount": 367,
+        "quoteCount": 653,
+        "indexedAt": "2026-11-08T12:34:00.372Z",
+        "record": {
+          "text": "“Office Safety”\n\nIf you don’t squeal with laughter five seconds into this you may be clinically dead.",
+          "createdAt": "2026-11-08T12:33:58.545Z"
+        }
+      }
+    },
+    {
+      "post": {
+        "uri": "at://did:plc:p2dcugajbtsn44h5n2kgt7ox/app.bsky.feed.post/3mztj24pp222r",
+        "likeCount": 2535,
+        "repostCount": 617,
+        "replyCount": 246,
+        "quoteCount": 38,
+        "indexedAt": "2026-11-08T22:56:07.544Z",
+        "record": {
+          "text": "It's my favorite time of year!  Time to do your holiday shopping by supporting independent artists!\n\nIf you're an artist or craftsperson of any kind, please reply to this with what you make and a link to your store and I'll share it!\n\nLet’s boost, support and buy cool stuff from artists!!",
+          "createdAt": "2026-11-08T22:56:07.294Z"
+        }
+      }
+    },
+    {
+      "post": {
+        "uri": "at://did:plc:djuj57armcsoyzmdfeg7i4qf/app.bsky.feed.post/3mzod4qisq22c",
+        "likeCount": 12323,
+        "repostCount": 2625,
+        "replyCount": 268,
+        "quoteCount": 391,
+        "indexedAt": "2026-11-06T21:26:55.481Z",
+        "record": {
+          "text": "if you've never seen a Capuchinbird (Perissocephalus tricolor), here you go",
+          "createdAt": "2026-11-06T21:26:54.007Z"
+        }
+      }
+    },
+    {
+      "post": {
+        "uri": "at://did:plc:bzy5rjjduvvkxno5xe3evl3f/app.bsky.feed.post/3mzm5wat4i22b",
+        "likeCount": 3751,
+        "repostCount": 740,
+        "replyCount": 581,
+        "quoteCount": 1381,
+        "indexedAt": "2026-11-06T00:48:28.371Z",
+        "record": {
+          "text": "You should welcome all the new people to Bluesky by TELLING US ALL ABOUT YOUR BOOK AND DONT FORGET A LINK SO WE CAN BUY IT. \n\nBluesky, the app for books.",
+          "createdAt": "2026-11-06T00:48:28.056Z"
+        }
+      }
+    },
+    {
+      "post": {
+        "uri": "at://did:plc:b5ly66nko7iijwy2lktt3ctq/app.bsky.feed.post/3mzlal2hpds2u",
+        "likeCount": 4798,
+        "repostCount": 594,
+        "replyCount": 285,
+        "quoteCount": 144,
+        "indexedAt": "2026-11-05T16:03:15.071Z",
+        "record": {
+          "text": "Lots of folks are joining BlueSky today! \n\nScientists of BlueSky, introduce yourselves and what you work on so new folks can follow you! \n\nI’m David, I’m a marine biologist and author who studies ocean conservation, especially sharks, endangered species, and sustainable fisheries! \n\n🧪🌎🦑🐟🦈 #SciComm",
+          "createdAt": "2026-11-05T16:03:13.775Z"
+        }
+      }
+    }
+  ],
+  "cursor": null
+}

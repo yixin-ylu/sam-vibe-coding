@@ -1,0 +1,23 @@
+name: SAM weekly report
+
+on:
+  workflow_dispatch:        # run manually from the Actions tab
+  # schedule:               # uncomment to run every Monday at 13:00 UTC (8am ET)
+  #   - cron: "0 13 * * 1"
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pandas
+      - run: python demos/04_automation/weekly_report.py
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: weekly-report
+          path: reports/

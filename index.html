@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SAM · Vibe Coding in the Business Classroom</title>
+<meta name="description" content="Demo programs, Google Colab notebooks and exercises for a project-based course where business students build a social media analytics toolkit with AI coding assistants.">
+<style>
+  :root { --blue:#005581; --tint:#E8F0F5; --ink:#1f2933; --muted:#5b6770; --line:#d9e3ea; --accent:#A75523; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:#fff; color:var(--ink); font:16px/1.6 "Segoe UI", system-ui, -apple-system, Arial, sans-serif; }
+  a { color:var(--blue); }
+  .wrap { max-width:1040px; margin:0 auto; padding:0 16px; }
+  header { border-top:6px solid var(--blue); padding:48px 0 32px; }
+  .kicker { color:var(--accent); font-weight:600; letter-spacing:.06em; text-transform:uppercase; font-size:.8rem; }
+  h1 { color:var(--blue); font-size:clamp(1.8rem, 4vw, 2.6rem); line-height:1.15; margin:.3em 0 .4em; }
+  .lead { font-size:1.12rem; color:var(--muted); max-width:760px; }
+  .btns { display:flex; gap:12px; flex-wrap:wrap; margin-top:20px; }
+  .btn { display:inline-block; padding:10px 18px; border-radius:6px; text-decoration:none; font-weight:600; border:2px solid var(--blue); }
+  .btn.primary { background:var(--blue); color:#fff; }
+  h2 { color:var(--blue); margin:48px 0 12px; font-size:1.5rem; border-bottom:2px solid var(--tint); padding-bottom:6px; }
+  .shot { width:100%; border:1px solid var(--line); border-radius:8px; margin-top:28px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(290px, 1fr)); gap:16px; }
+  .card { border:1px solid var(--line); border-radius:8px; padding:18px; display:flex; flex-direction:column; }
+  .card h3 { margin:0 0 6px; font-size:1.05rem; }
+  .num { display:inline-block; width:28px; height:28px; border-radius:50%; background:var(--blue); color:#fff; text-align:center; line-height:28px; font-size:.85rem; margin-right:6px; }
+  .card p { margin:4px 0 12px; color:var(--muted); font-size:.95rem; flex:1; }
+  .tags { display:flex; gap:6px; flex-wrap:wrap; margin-bottom:12px; }
+  .tag { background:var(--tint); color:var(--blue); font-size:.75rem; padding:2px 8px; border-radius:10px; }
+  .tag.ai { background:#f6e9e1; color:var(--accent); }
+  .links a { font-size:.9rem; margin-right:12px; }
+  table { width:100%; border-collapse:collapse; font-size:.95rem; }
+  th { background:var(--blue); color:#fff; text-align:left; padding:8px 10px; }
+  td { padding:8px 10px; border-bottom:1px solid var(--line); vertical-align:top; }
+  .tablewrap { overflow-x:auto; }
+  .steps { counter-reset:s; list-style:none; padding:0; display:grid; grid-template-columns:repeat(auto-fit, minmax(180px, 1fr)); gap:12px; }
+  .steps li { background:var(--tint); border-radius:8px; padding:14px; }
+  .steps li::before { counter-increment:s; content:"Step " counter(s); display:block; font-weight:700; color:var(--blue); }
+  footer { margin:56px 0 0; padding:24px 0 40px; border-top:1px solid var(--line); color:var(--muted); font-size:.9rem; }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="kicker">Teaching innovation with AI</div>
+    <h1>Vibe Coding in the Business Classroom</h1>
+    <p class="lead">Business students build <strong>SAM</strong>, a Social Media Management Toolkit, by guiding AI coding
+      assistants in plain English. They write specifications, check the AI's work, and ship a working data product.
+      Every demo below runs in Google Colab in your browser, with nothing to install.</p>
+    <div class="btns">
+      <a class="btn primary" href="https://colab.research.google.com/github/yixin-ylu/sam-vibe-coding/blob/main/notebooks/01_prompt_to_code.ipynb">Start Demo 1 in Colab</a>
+      <a class="btn" href="https://github.com/yixin-ylu/sam-vibe-coding">View code on GitHub</a>
+    </div>
+    <img class="shot" src="assets/dashboard.png" alt="SAM dashboard showing KPI tiles, weekly engagement by platform, engagement by content format, and a best-time-to-post heatmap">
+  </div>
+</header>
+
+<main class="wrap">
+  <h2>Demo programs</h2>
+  <div class="grid">
+    <div class="card"><h3><span class="num">1</span>Prompt → tested code</h3>
+      <div class="tags"><span class="tag">prompting</span><span class="tag">pandas</span><span class="tag">pytest</span></div>
+      <p>One well-specified prompt produces an engagement-rate report, plus tests that catch the zero-impressions edge case.</p>
+      <div class="links"><a href="https://colab.research.google.com/github/yixin-ylu/sam-vibe-coding/blob/main/notebooks/01_prompt_to_code.ipynb">Open in Colab</a><a href="https://github.com/yixin-ylu/sam-vibe-coding/tree/main/demos/01_prompt_to_code">Code</a></div></div>
+    <div class="card"><h3><span class="num">2</span>Collect data from a real API</h3>
+      <div class="tags"><span class="tag">REST</span><span class="tag">JSON</span><span class="tag">pagination</span></div>
+      <p>Pull public posts from Bluesky's open API (no key needed), flatten the JSON, and save a CSV. Includes the three things the AI got wrong.</p>
+      <div class="links"><a href="https://colab.research.google.com/github/yixin-ylu/sam-vibe-coding/blob/main/notebooks/02_collect_data.ipynb">Open in Colab</a><a href="https://github.com/yixin-ylu/sam-vibe-coding/tree/main/demos/02_collect_data">Code</a></div></div>
+    <div class="card"><h3><span class="num">3</span>KPI dashboard</h3>
+      <div class="tags"><span class="tag">Plotly</span><span class="tag">Streamlit</span><span class="tag">deploy</span></div>
+      <p>An interactive dashboard built in five prompts: KPI tiles, filters, trends, best time to post. It runs inline in Colab or as a web app.</p>
+      <div class="links"><a href="https://colab.research.google.com/github/yixin-ylu/sam-vibe-coding/blob/main/notebooks/03_dashboard.ipynb">Open in Colab</a><a href="https://github.com/yixin-ylu/sam-vibe-coding/tree/main/demos/03_dashboard">Code</a></div></div>
+    <div class="card"><h3><span class="num">4</span>Weekly report + alerts</h3>
+      <div class="tags"><span class="tag">automation</span><span class="tag">GitHub Actions</span></div>
+      <p>Compares each week with the one before, flags engagement drops, writes HTML/Markdown reports and can post alerts to Slack.</p>
+      <div class="links"><a href="https://colab.research.google.com/github/yixin-ylu/sam-vibe-coding/blob/main/notebooks/04_automation.ipynb">Open in Colab</a><a href="https://github.com/yixin-ylu/sam-vibe-coding/tree/main/demos/04_automation">Code</a></div></div>
+    <div class="card"><h3><span class="num">5</span>Sentiment &amp; crisis warning</h3>
+      <div class="tags"><span class="tag">NLP</span><span class="tag">monitoring</span></div>
+      <p>Scores customer comments, tracks weekly net sentiment, and catches the simulated service crisis.</p>
+      <div class="links"><a href="https://colab.research.google.com/github/yixin-ylu/sam-vibe-coding/blob/main/notebooks/05_sentiment.ipynb">Open in Colab</a><a href="https://github.com/yixin-ylu/sam-vibe-coding/tree/main/demos/05_sentiment">Code</a></div></div>
+    <div class="card"><h3><span class="num">6</span>LLM features with Gemini</h3>
+      <div class="tags"><span class="tag ai">Gemini API · free</span><span class="tag">structured output</span></div>
+      <p>Generate captions tailored to each platform, then classify comments by sentiment and topic into JSON and compare with the word list.</p>
+      <div class="links"><a href="https://colab.research.google.com/github/yixin-ylu/sam-vibe-coding/blob/main/notebooks/06_gemini_basics.ipynb">Open in Colab</a><a href="https://github.com/yixin-ylu/sam-vibe-coding/tree/main/demos/06_gemini_basics">Code</a></div></div>
+    <div class="card"><h3><span class="num">7</span>AI strategist agent</h3>
+      <div class="tags"><span class="tag ai">Claude API</span><span class="tag">tool use</span><span class="tag">agents</span></div>
+      <p>Claude calls six data tools on its own, then writes a strategy memo and content calendar backed by the numbers. Students audit every claim.</p>
+      <div class="links"><a href="https://colab.research.google.com/github/yixin-ylu/sam-vibe-coding/blob/main/notebooks/07_claude_agent.ipynb">Open in Colab</a><a href="https://github.com/yixin-ylu/sam-vibe-coding/tree/main/demos/07_claude_agent">Code</a></div></div>
+  </div>
+
+  <h2>Getting started</h2>
+  <ol class="steps">
+    <li>Click any <em>Open in Colab</em> link and sign in with a Google account.</li>
+    <li>Run the first cell. It copies the course files into your session.</li>
+    <li>Demos 1–5 need no key. For 6, add a free <code>GEMINI_API_KEY</code> in Colab's 🔑 Secrets panel.</li>
+    <li>For Demo 7, add an <code>ANTHROPIC_API_KEY</code> (about $0.10–$0.40 per run).</li>
+  </ol>
+
+  <h2>14-week course at a glance</h2>
+  <div class="tablewrap"><table>
+    <tr><th>Weeks</th><th>Theme</th><th>Demo</th><th>Deliverable</th></tr>
+    <tr><td>1–2</td><td>Orientation: AI tools, prompting, Git</td><td>1</td><td>Tested KPI script</td></tr>
+    <tr><td>3–4</td><td>API basics, OAuth 2.0</td><td>2</td><td>Working data fetch</td></tr>
+    <tr><td>5–6</td><td>Data collection &amp; storage</td><td>2</td><td>Clean, append-only dataset</td></tr>
+    <tr><td>7–8</td><td>Visualization</td><td>3</td><td>Interactive dashboard</td></tr>
+    <tr><td>9–10</td><td>Automation &amp; AI features</td><td>4–6</td><td>Automated report + LLM feature</td></tr>
+    <tr><td>11–12</td><td>Iteration, peer review, agents</td><td>7</td><td>Tested, audited application</td></tr>
+    <tr><td>13–14</td><td>Demo Day, portfolio, AI ethics</td><td>all</td><td>Live demo + portfolio README</td></tr>
+  </table></div>
+
+  <h2>For instructors</h2>
+  <div class="grid">
+    <div class="card"><h3>Exercises</h3><p>Week-by-week exercises, each with a prompt starter, acceptance criteria and a reflection step.</p>
+      <div class="links"><a href="https://github.com/yixin-ylu/sam-vibe-coding/blob/main/exercises/README.md">Open exercises</a></div></div>
+    <div class="card"><h3>Plug-in modules</h3><p>Sessions of one class to four weeks for Marketing, Analytics, Operations, Strategy and Entrepreneurship courses, plus the same recipe applied to other domains.</p>
+      <div class="links"><a href="https://github.com/yixin-ylu/sam-vibe-coding/blob/main/course-modules/README.md">Open modules</a></div></div>
+    <div class="card"><h3>Templates &amp; rubrics</h3><p>Prompt Engineering Journal, peer code review rubric, user-story template with a Responsible-AI checklist, and a portfolio README.</p>
+      <div class="links"><a href="https://github.com/yixin-ylu/sam-vibe-coding/tree/main/templates">Open templates</a></div></div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    Created by Yixin Lu, Department of Information Systems &amp; Technology Management.
+    All sample data is synthetic. Code MIT, materials CC BY 4.0.
+  </div>
+</footer>
+</body>
+</html>
