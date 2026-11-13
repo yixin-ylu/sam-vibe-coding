@@ -2,16 +2,17 @@
 
 The full SAM course is 14 weeks, but each piece also works on its own. Below are drop-in modules
 that other GWSB courses can adopt **without** turning into a programming course.
-Every module runs in Google Colab with no installation.
+Every module runs in Google Colab with no installation and uses the same case, Lumora's $1.2M EdTech launch campaign (`data/README.md`), so instructors can mix modules freely.
 
 | Module | Length | Fits courses like… | Notebooks | Students leave with |
 |---|---|---|---|---|
 | **A. Vibe-coding taster** | 1 session (75 min) | Intro programming (ISTM 3119), any MBA core | 01 | A tested KPI script built from a prompt |
-| **B. Social listening lab** | 2 sessions | Marketing Analytics, Digital Marketing, Consumer Behavior | 02, 05, 06 | Sentiment + topic report on a real brand |
-| **C. KPI dashboard sprint** | 2 weeks | Business Analytics, Data Visualization, Information Systems | 03 | A deployed Streamlit dashboard |
-| **D. Automate the boring report** | 1 week | Operations, Business Process Management | 04 | A scheduled weekly report with alerts |
-| **E. AI agent for strategy** | 1–2 sessions | Strategy, Capstone, MBA electives on AI | 07 | An audited AI-written strategy memo |
-| **F. Build-a-startup MVP** | 3–4 weeks | Entrepreneurship, New Venture Creation | 01–07 | MVP + pricing / go-to-market slide |
+| **B. Crisis & social listening lab** | 2 sessions | Marketing Analytics, Digital Marketing, Crisis Communication | 02, 05, 06 | Incident brief on the week-7 privacy rumour |
+| **C. Campaign dashboard sprint** | 2 weeks | Business Analytics, Data Visualization, Information Systems | 01, 03 | A deployed dashboard + unit-economics analysis |
+| **D. Automate the boring report** | 1 week | Operations, Business Process Management | 04 | A scheduled pacing report with alerts |
+| **E. AI agent for strategy** | 1–2 sessions | Marketing Strategy, MBA capstone, AI electives | 07 | An audited AI-written budget memo |
+| **F. Experimentation & marketing statistics** | 1 session | Marketing Research, Business Statistics | 07 + `ab_test.csv` | A/B verdict with z-tests, power analysis, compliance risk |
+| **G. Build-a-startup MVP** | 3–4 weeks | Entrepreneurship, New Venture Creation | 01–07 | MVP + pricing / go-to-market slide |
 
 ## Beyond social media: the same recipe, other domains
 

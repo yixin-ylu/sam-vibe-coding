@@ -1,46 +1,52 @@
-# Demo 1 — From a prompt to working code
+# Demo 1: from a prompt to working code
 
-**Goal:** show that a business student can turn a plain-English requirement into a
-tested Python module, and that the *student* still owns the specification and the checks.
+**Case:** Lumora, a fictional AI-tutoring startup, is halfway through a $1.2M back-to-school campaign.
+The CMO asks: *"Which channel is actually paying off?"* A graduate student turns that question into a
+precise specification. The AI writes the code. The student checks it.
 
-## The prompt we gave the AI assistant (Cursor / Claude Code)
+## The prompt we gave the AI assistant (Cursor / Claude Code / Gemini in Colab)
 
-> I have a CSV file `data/sample_posts.csv` with columns
-> `post_id, platform, posted_at, post_type, category, caption, impressions, likes, comments, shares, followers`.
+> I have `data/campaign_posts.csv`, one row per social post, with columns including
+> `platform, segment, paid, spend_usd, impressions, clicks, trials, paid_conversions, demo_requests, revenue_usd, pipeline_usd`.
 >
-> Write a Python script `engagement.py` that:
-> 1. Loads the CSV with pandas.
-> 2. Adds a column `engagement_rate = (likes + comments + shares) / impressions`.
-> 3. Prints a table of the **average engagement rate per platform**, sorted high to low, as percentages with 2 decimals.
-> 4. Prints the **top 5 posts** by engagement rate (platform, caption, rate).
-> 5. Guards against division by zero (impressions = 0 → rate = 0).
+> Write a Python module `campaign_kpis.py` that:
+> 1. Loads the CSV with pandas and keeps **paid** posts only (`paid == 1`).
+> 2. Aggregates by `platform` and computes:
+>    - CPM = spend / impressions × 1000
+>    - CTR = clicks / impressions
+>    - CPA = spend / trials (cost per free trial)
+>    - CAC = spend / paid_conversions (cost per paying customer)
+>    - ROAS = revenue_usd / spend (first-year revenue)
+>    - Cost per demo request = spend / demo_requests (B2B, LinkedIn)
+> 3. Prints a table sorted by CAC, with money to 2 decimals and CTR as a %.
+> 4. Uses a helper `safe_div(a, b)` that returns `NaN` (not an error, not 0) when `b` is 0.
 >
-> Keep it under 60 lines, add docstrings, and include a `if __name__ == "__main__":` block.
-> Also write 3 small `pytest` tests for the engagement-rate function, including the zero-impressions case.
+> Keep it under 70 lines, with docstrings and an `if __name__ == "__main__":` block.
+> Also write `pytest` tests for `safe_div` (including b = 0) and one test that checks CAC on a 2-row DataFrame I can verify by hand.
 
-## What makes this a *good* prompt (rubric: Clarity of Intent)
+## Why this prompt works (rubric: Clarity of Intent)
 
 | Element | In the prompt |
 |---|---|
-| Input specified | file path and exact column names |
-| Output specified | two printed tables, format of numbers |
-| Business definition | the KPI formula is written out by the student |
-| Constraints | length, docstrings, entry point |
-| Verification | tests requested, incl. an edge case |
+| Input specified | file path and exact columns |
+| **Business definitions** | the student defines every KPI. *CPA ≠ CAC* is a business decision, not a coding one |
+| Scope decision | paid posts only (organic posts have zero spend) |
+| Edge cases | division by zero returns `NaN` on purpose, because `0` would make a channel look free |
+| Verification | tests requested, including a case small enough to check by hand |
 
-## A weak version of the same prompt (for comparison in class)
+## The weak version (for class discussion)
 
-> "Make me a script that analyzes my social media data."
+> "Analyze my campaign data and tell me which channel is best."
 
-Ask students: *what would the AI have to guess?* (which file, which KPI, which formula,
-what output, how to handle bad data …)
+What would the AI have to guess? *Best by what?* Engagement, cheapest trials, cheapest customers, or B2B pipeline?
+In this dataset those four answers **pick different channels**. That is the lesson.
 
 ## Files
 
-- `engagement.py` — the code the assistant produced (lightly reviewed by the instructor)
-- `test_engagement.py` — the tests
+- `campaign_kpis.py`: the code the assistant produced (reviewed by the instructor)
+- `test_campaign_kpis.py`: the tests
 
 ```bash
-python demos/01_prompt_to_code/engagement.py
+python demos/01_prompt_to_code/campaign_kpis.py
 pytest demos/01_prompt_to_code
 ```

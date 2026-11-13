@@ -1,12 +1,15 @@
-# Demo 5: comment sentiment + crisis early warning
+# Demo 5: comment sentiment + issue early warning
 
 ```bash
 python demos/05_sentiment/sentiment.py
 ```
 
-- Scores every comment with **VADER** (`pip install vaderSentiment`) or, if that isn't installed, a transparent built-in word list.
-- Tracks weekly **net sentiment** (share positive minus share negative) and flags sharp drops. The synthetic data has a "service crisis" in the week of Oct 26.
-- Lists the most common complaints.
+- Scores all 2,192 campaign comments with **VADER** (or, if VADER isn't installed, a transparent word list).
+- Tracks weekly **net sentiment** (share positive minus share negative), overall and by segment, and flags sharp drops.
+- Tags issue topics with **keyword rules** (privacy, pricing, cheating, bugs, efficacy).
+- Week 7: parent and educator sentiment turns negative, and "privacy" dominates the complaints. That is the viral
+  rumour that Lumora trains its AI on student homework.
 
-**Discussion:** a word list is cheap, fast and explainable, but misses sarcasm and context. Demo 6b
-asks an LLM to do the same job. Compare them in Exercise 6.2.
+**Discussion:** rules and lexicons are cheap, fast and explainable, but they miss context. VADER, for instance,
+scores *"Deleting the app until you explain what you do with student data"* as neutral. Demo 6b gives the same job
+to an LLM. Compare them in Exercise 6.2.

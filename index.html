@@ -45,7 +45,8 @@
     <div class="kicker">Teaching innovation with AI</div>
     <h1>Vibe Coding in the Business Classroom</h1>
     <p class="lead">Business students build <strong>SAM</strong>, a Social Media Management Toolkit, by guiding AI coding
-      assistants in plain English. They write specifications, check the AI's work, and ship a working data product.
+      assistants in plain English. They write specifications, check the AI's work, and ship a working marketing-analytics product
+      for a realistic case: a <strong>$1.2M EdTech launch campaign</strong>.
       Every demo below runs in Google Colab in your browser, with nothing to install.</p>
     <div class="btns">
       <a class="btn primary" href="https://colab.research.google.com/github/yixin-ylu/sam-vibe-coding/blob/main/notebooks/01_prompt_to_code.ipynb">Start Demo 1 in Colab</a>
@@ -56,35 +57,48 @@
 </header>
 
 <main class="wrap">
+  <h2>The case: Lumora's "Learn Smarter" campaign</h2>
+  <p><strong>Lumora</strong> (fictional) is an AI-tutoring startup launching <em>Lumora Pro</em> with a 12-week,
+    $1.2M back-to-school campaign on TikTok, Instagram, YouTube and LinkedIn. It targets three audiences:
+    <strong>students</strong> (users), <strong>parents</strong> (payers) and <strong>educators</strong> (B2B school licenses).
+    The synthetic data tracks every post from impression to free trial to paying customer or school demo request.</p>
+  <div class="grid">
+    <div class="card"><h3>CPA ≠ CAC</h3><p>TikTok buys the cheapest trials ($10) but not the cheapest customers: parents cost $58, students $225.</p></div>
+    <div class="card"><h3>B2B is different</h3><p>LinkedIn looks terrible on CAC but returns about $8 of school-license pipeline per $1.</p></div>
+    <div class="card"><h3>A trust crisis</h3><p>In week 7 a viral post claims Lumora trains its AI on student homework. Parent conversion halves. Can students spot it and quantify it?</p></div>
+    <div class="card"><h3>Overspend &amp; a risky A/B test</h3><p>TikTok runs 60% over plan and CAC doubles. Ad hook B wins clicks but loses trials, and makes an efficacy claim that may be unsubstantiated.</p></div>
+  </div>
+  <p class="links"><a href="https://github.com/yixin-ylu/sam-vibe-coding/blob/main/data/README.md">Read the full case &amp; data dictionary</a></p>
+
   <h2>Demo programs</h2>
   <div class="grid">
     <div class="card"><h3><span class="num">1</span>Prompt → tested code</h3>
       <div class="tags"><span class="tag">prompting</span><span class="tag">pandas</span><span class="tag">pytest</span></div>
-      <p>One well-specified prompt produces an engagement-rate report, plus tests that catch the zero-impressions edge case.</p>
+      <p>"Which channel is paying off?" One well-specified prompt turns that into CPM, CTR, CPA, CAC, ROAS and pipeline per dollar by channel, plus tests.</p>
       <div class="links"><a href="https://colab.research.google.com/github/yixin-ylu/sam-vibe-coding/blob/main/notebooks/01_prompt_to_code.ipynb">Open in Colab</a><a href="https://github.com/yixin-ylu/sam-vibe-coding/tree/main/demos/01_prompt_to_code">Code</a></div></div>
     <div class="card"><h3><span class="num">2</span>Collect data from a real API</h3>
       <div class="tags"><span class="tag">REST</span><span class="tag">JSON</span><span class="tag">pagination</span></div>
-      <p>Pull public posts from Bluesky's open API (no key needed), flatten the JSON, and save a CSV. Includes the three things the AI got wrong.</p>
+      <p>Benchmark competitors: pull public posts from Bluesky's open API (no key needed), flatten the JSON, and save a CSV. Includes the three things the AI got wrong.</p>
       <div class="links"><a href="https://colab.research.google.com/github/yixin-ylu/sam-vibe-coding/blob/main/notebooks/02_collect_data.ipynb">Open in Colab</a><a href="https://github.com/yixin-ylu/sam-vibe-coding/tree/main/demos/02_collect_data">Code</a></div></div>
-    <div class="card"><h3><span class="num">3</span>KPI dashboard</h3>
+    <div class="card"><h3><span class="num">3</span>Campaign dashboard</h3>
       <div class="tags"><span class="tag">Plotly</span><span class="tag">Streamlit</span><span class="tag">deploy</span></div>
-      <p>An interactive dashboard built in five prompts: KPI tiles, filters, trends, best time to post. It runs inline in Colab or as a web app.</p>
+      <p>Built in six prompts: spend vs. plan, CPA vs. CAC, diminishing returns, funnels by audience, and a content-pillar heatmap. It runs inline in Colab or as a web app.</p>
       <div class="links"><a href="https://colab.research.google.com/github/yixin-ylu/sam-vibe-coding/blob/main/notebooks/03_dashboard.ipynb">Open in Colab</a><a href="https://github.com/yixin-ylu/sam-vibe-coding/tree/main/demos/03_dashboard">Code</a></div></div>
     <div class="card"><h3><span class="num">4</span>Weekly report + alerts</h3>
       <div class="tags"><span class="tag">automation</span><span class="tag">GitHub Actions</span></div>
-      <p>Compares each week with the one before, flags engagement drops, writes HTML/Markdown reports and can post alerts to Slack.</p>
+      <p>Budget pacing, week-over-week CPA/CAC, and alerts for overspend, cost jumps and trust signals. Writes HTML/Markdown and can post to Slack.</p>
       <div class="links"><a href="https://colab.research.google.com/github/yixin-ylu/sam-vibe-coding/blob/main/notebooks/04_automation.ipynb">Open in Colab</a><a href="https://github.com/yixin-ylu/sam-vibe-coding/tree/main/demos/04_automation">Code</a></div></div>
-    <div class="card"><h3><span class="num">5</span>Sentiment &amp; crisis warning</h3>
+    <div class="card"><h3><span class="num">5</span>Sentiment &amp; issue warning</h3>
       <div class="tags"><span class="tag">NLP</span><span class="tag">monitoring</span></div>
-      <p>Scores customer comments, tracks weekly net sentiment, and catches the simulated service crisis.</p>
+      <p>Scores 2,192 comments with VADER and keyword topics, tracks net sentiment by audience, and catches the week-7 privacy rumour.</p>
       <div class="links"><a href="https://colab.research.google.com/github/yixin-ylu/sam-vibe-coding/blob/main/notebooks/05_sentiment.ipynb">Open in Colab</a><a href="https://github.com/yixin-ylu/sam-vibe-coding/tree/main/demos/05_sentiment">Code</a></div></div>
     <div class="card"><h3><span class="num">6</span>LLM features with Gemini</h3>
       <div class="tags"><span class="tag ai">Gemini API · free</span><span class="tag">structured output</span></div>
-      <p>Generate captions tailored to each platform, then classify comments by sentiment and topic into JSON and compare with the word list.</p>
+      <p>Write ad copy for each audience under compliance rules (no unsubstantiated efficacy claims), then classify comments into JSON (sentiment, topic, needs reply).</p>
       <div class="links"><a href="https://colab.research.google.com/github/yixin-ylu/sam-vibe-coding/blob/main/notebooks/06_gemini_basics.ipynb">Open in Colab</a><a href="https://github.com/yixin-ylu/sam-vibe-coding/tree/main/demos/06_gemini_basics">Code</a></div></div>
-    <div class="card"><h3><span class="num">7</span>AI strategist agent</h3>
+    <div class="card"><h3><span class="num">7</span>Campaign-strategy agent</h3>
       <div class="tags"><span class="tag ai">Claude API</span><span class="tag">tool use</span><span class="tag">agents</span></div>
-      <p>Claude calls six data tools on its own, then writes a strategy memo and content calendar backed by the numbers. Students audit every claim.</p>
+      <p>Claude calls nine data tools, including z-tests for the A/B test, then writes a CMO memo allocating a $400k extension. Students audit every number.</p>
       <div class="links"><a href="https://colab.research.google.com/github/yixin-ylu/sam-vibe-coding/blob/main/notebooks/07_claude_agent.ipynb">Open in Colab</a><a href="https://github.com/yixin-ylu/sam-vibe-coding/tree/main/demos/07_claude_agent">Code</a></div></div>
   </div>
 
@@ -93,7 +107,7 @@
     <li>Click any <em>Open in Colab</em> link and sign in with a Google account.</li>
     <li>Run the first cell. It copies the course files into your session.</li>
     <li>Demos 1–5 need no key. For 6, add a free <code>GEMINI_API_KEY</code> in Colab's 🔑 Secrets panel.</li>
-    <li>For Demo 7, add an <code>ANTHROPIC_API_KEY</code> (about $0.10–$0.40 per run).</li>
+    <li>For Demo 7, add an <code>ANTHROPIC_API_KEY</code> (about $0.15–$0.60 per run).</li>
   </ol>
 
   <h2>14-week course at a glance</h2>

@@ -1,16 +1,16 @@
 # From business goal to user stories to prompts
 
 ## 1. Business goal
-_Example: "Help the coffee shop owner decide where to spend 5 hours a week of social media effort."_
+_Example: "Help Lumora's CMO decide how to allocate a $400k campaign extension across channels and audiences."_
 
 ## 2. User stories
 `As a <role>, I want <capability>, so that <business value>.`
 
 | # | User story | Acceptance criteria (testable) | Priority |
 |---|---|---|---|
-| 1 | As the **owner**, I want to see engagement by platform, so that I can drop the weakest channel. | Dashboard shows mean engagement rate per platform; numbers match a hand check | Must |
-| 2 | As the **marketing intern**, I want the best time to post, so that I schedule posts when people are online. | Heatmap of weekday × hour; top 3 slots listed | Should |
-| 3 | As the **owner**, I want an alert when complaints spike, so that I can fix service issues fast. | Alert fires when weekly negative share > 30%; tested with fake data | Must |
+| 1 | As the **CMO**, I want CAC and pipeline per dollar by channel, so that I can reallocate budget to what creates customers, not just clicks. | Table of CPA, CAC, pipeline per $ for paid posts; matches a hand check on one channel | Must |
+| 2 | As the **paid-media manager**, I want weekly spend vs. plan per channel, so that I catch overspend before month-end. | Pacing chart + alert when a channel is >10% over plan | Must |
+| 3 | As the **head of communications**, I want an alert when privacy complaints spike, so that we respond within 24 hours. | Alert fires when parent/educator conversion or sentiment drops sharply; tested with fake data | Must |
 
 ## 3. Prompt plan (one small prompt per story)
 1. Story 1 → "…"

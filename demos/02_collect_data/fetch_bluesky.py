@@ -18,11 +18,16 @@ from __future__ import annotations
 import argparse
 import csv
 import json
+import sys
 import time
 import urllib.error
 import urllib.parse
 import urllib.request
 from pathlib import Path
+
+if hasattr(sys.stdout, "reconfigure"):  # emoji/Δ output on Windows consoles
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+
 
 API = "https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed"
 HERE = Path(__file__).resolve().parent
