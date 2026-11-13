@@ -1,6 +1,6 @@
 # Demo 1: from a prompt to working code
 
-**Case:** Lumora, a fictional AI-tutoring startup, is halfway through a $1.2M back-to-school campaign.
+**Case:** Athenova, a fictional AI-tutoring startup, is halfway through a $1.2M back-to-school campaign.
 The CMO asks: *"Which channel is actually paying off?"* A graduate student turns that question into a
 precise specification. The AI writes the code. The student checks it.
 

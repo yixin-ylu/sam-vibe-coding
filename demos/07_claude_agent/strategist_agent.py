@@ -1,7 +1,7 @@
 """Demo 7 (advanced): a campaign-strategy agent built on the Claude API.
 
 Unlike the one-prompt-one-answer calls in Demo 6, Claude here gets nine TOOLS (plain
-Python functions over the Lumora campaign data). It decides which to call, in what
+Python functions over the Athenova campaign data). It decides which to call, in what
 order, reads the results, and keeps going until it can write an evidence-based memo
 to the CMO: channel economics, the week-7 privacy incident, the A/B test verdict, and
 a budget reallocation. Every tool call is printed so students can audit the agent.
@@ -83,7 +83,7 @@ def campaign_overview() -> str:
     """Campaign facts and totals: dates, plan, spend to date, trials, customers, demo requests,
     and the business assumptions behind revenue and pipeline."""
     return json.dumps({
-        "company": "Lumora (fictional AI-tutoring startup)", "campaign": "Learn Smarter, back-to-school launch of Lumora Pro",
+        "company": "Athenova (fictional AI-tutoring startup)", "campaign": "Learn Smarter, back-to-school launch of Athenova Pro",
         "weeks": int(POSTS.week.max()), "start": "2026-08-03", "planned_budget": int(PLAN.planned_spend_usd.sum()),
         "actual_spend": round(POSTS.spend_usd.sum()), "trials": int(POSTS.trials.sum()),
         "paying_customers": int(POSTS.paid_conversions.sum()), "school_demo_requests": int(POSTS.demo_requests.sum()),
@@ -222,7 +222,7 @@ def sample_comments(week: int, segment: str = "all", n: int = 10) -> str:
 TOOLS = [campaign_overview, channel_economics, budget_pacing, weekly_trend, performance_by,
          spend_response, ab_test_results, comment_topics_by_week, sample_comments]
 
-SYSTEM = """You are a senior growth-marketing analyst advising the CMO of Lumora, an AI-tutoring
+SYSTEM = """You are a senior growth-marketing analyst advising the CMO of Athenova, an AI-tutoring
 startup, on its 12-week back-to-school campaign. Your tools query the campaign's data
 (synthetic, for a graduate business course).
 

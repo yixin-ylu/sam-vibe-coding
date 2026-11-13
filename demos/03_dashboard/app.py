@@ -1,4 +1,4 @@
-"""Demo 3: campaign performance dashboard for Lumora's "Learn Smarter" launch (Streamlit).
+"""Demo 3: campaign performance dashboard for Athenova's "Learn Smarter" launch (Streamlit).
 
 Run locally:
     streamlit run demos/03_dashboard/app.py
@@ -33,7 +33,7 @@ elif media == "Organic only":
     mask &= df.paid == 0
 f = df[mask]
 
-st.title("📊 Lumora · Learn Smarter campaign")
+st.title("📊 Athenova · Learn Smarter campaign")
 st.caption("Fictional AI-tutoring startup · 12 weeks · $1.2M plan · synthetic data · built with AI-assisted 'vibe coding'")
 
 if f.empty:
@@ -60,4 +60,4 @@ with tab2:
 with tab3:
     st.dataframe(charts.top_posts(f).style.format({"spend_usd": "${:,.0f}"}),
                  use_container_width=True, hide_index=True)
-    st.download_button("Download filtered data (CSV)", f.to_csv(index=False), "lumora_filtered.csv", "text/csv")
+    st.download_button("Download filtered data (CSV)", f.to_csv(index=False), "athenova_filtered.csv", "text/csv")

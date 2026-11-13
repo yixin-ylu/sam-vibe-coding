@@ -39,4 +39,4 @@ The fetch → parse → save shape stays the same. What changes:
 - you send `Authorization: Bearer <token>`
 - you deal with token expiry and app review
 
-Until developer access is approved, run the exercises against the synthetic Lumora case in `data/`.
+Until developer access is approved, run the exercises against the synthetic Athenova case in `data/`.

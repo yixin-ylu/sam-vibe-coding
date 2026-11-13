@@ -1,4 +1,4 @@
-"""Data prep + Plotly charts for the Lumora campaign dashboard.
+"""Data prep + Plotly charts for the Athenova campaign dashboard.
 
 Shared by the Streamlit app (app.py) and the Colab notebook, so students can
 see the charts inline in Colab/Jupyter without running a web server.

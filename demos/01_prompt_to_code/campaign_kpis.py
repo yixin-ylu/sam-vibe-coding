@@ -1,4 +1,4 @@
-"""Demo 1: channel unit economics for the Lumora campaign, generated from one prompt.
+"""Demo 1: channel unit economics for the Athenova campaign, generated from one prompt.
 
 Usage:
     python demos/01_prompt_to_code/campaign_kpis.py [path/to/campaign_posts.csv]

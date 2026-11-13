@@ -10,7 +10,7 @@ assistants in plain English.
 
 ## The case
 
-**Lumora** (fictional) is an AI-tutoring startup running **"Learn Smarter"**, a 12-week, **$1.2M** back-to-school
+**Athenova** (fictional) is an AI-tutoring startup running **"Learn Smarter"**, a 12-week, **$1.2M** back-to-school
 campaign on TikTok, Instagram, YouTube and LinkedIn aimed at **students** (users), **parents** (payers) and
 **educators** (B2B school licenses). The synthetic data hides graduate-level questions to uncover: CPA vs. CAC vs.
 B2B pipeline, a student-data privacy incident in week 7, diminishing returns from overspending, and an A/B test with
@@ -44,7 +44,7 @@ streamlit run demos/03_dashboard/app.py
 ## What's inside
 
 ```
-data/              the Lumora case: synthetic posts, comments, budget plan, A/B test (+ generator)
+data/              the Athenova case: synthetic posts, comments, budget plan, A/B test (+ generator)
 demos/01..07/      demo programs, each with a README and the prompts used to build it
 notebooks/         one Colab notebook per demo
 exercises/         14-week exercise sequence with acceptance criteria
@@ -54,7 +54,7 @@ templates/         prompt journal, peer-review rubric, user stories, portfolio R
 ```
 
 ## Data & responsible use
-All data in `data/` is **synthetic**, and Lumora is a fictional company. Demo 2 reads public posts from organisational
+All data in `data/` is **synthetic**, and Athenova is a fictional company. Demo 2 reads public posts from organisational
 accounts via Bluesky's public API. Do not collect personal data, and read each platform's developer terms before using its API.
 
 ## License

@@ -1,8 +1,8 @@
 """
 Generate the synthetic case dataset used by every SAM demo.
 
-CASE: Lumora (a FICTIONAL AI-tutoring startup) runs "Learn Smarter", a 12-week,
-$1.2M back-to-school campaign (Aug 3 - Oct 25, 2026) to launch Lumora Pro.
+CASE: Athenova (a FICTIONAL AI-tutoring startup) runs "Learn Smarter", a 12-week,
+$1.2M back-to-school campaign (Aug 3 - Oct 25, 2026) to launch Athenova Pro.
 
   Audiences : Students (B2C users), Parents (B2C payers), Educators (B2B school licenses)
   Channels  : TikTok, Instagram, YouTube, LinkedIn, organic + paid
@@ -14,7 +14,7 @@ Patterns hidden in the data for students to discover:
      (students try, parents pay): CPA and CAC rank channels differently.
   2. Creator/UGC content wins on TikTok and Instagram; testimonials win with parents;
      thought leadership drives school demo requests on LinkedIn; promos flop on LinkedIn.
-  3. Week 7 (Sep 14): a viral post alleges Lumora trains its AI on student data.
+  3. Week 7 (Sep 14): a viral post alleges Athenova trains its AI on student data.
      Privacy complaints spike, parent conversions collapse, then recover after the
      "Trust & privacy" content the team launches in week 8.
   4. From week 9 the team scales TikTok spend about 60% over plan: CPM rises, CTR
@@ -72,25 +72,25 @@ PILLARS = {
     "Trust & privacy":    (0.90, 0.90, 1.00),
 }
 CAPTIONS = {
-    "Product demo": ["See how Lumora explains calculus step by step",
-                     "60 seconds: Lumora turns your notes into a practice quiz",
-                     "Stuck at 11pm? Ask Lumora, your AI study partner"],
+    "Product demo": ["See how Athenova explains calculus step by step",
+                     "60 seconds: Athenova turns your notes into a practice quiz",
+                     "Stuck at 11pm? Ask Athenova, your AI study partner"],
     "Testimonial": ["\"My son finally likes chemistry\": a parent's story",
-                    "How Maya went from cramming to confident with Lumora",
-                    "A teacher on what changed after one semester with Lumora"],
+                    "How Maya went from cramming to confident with Athenova",
+                    "A teacher on what changed after one semester with Athenova"],
     "Study tips": ["3 science-backed ways to remember more before exams",
                    "The 25-minute study method that actually works",
                    "How to turn a syllabus into a weekly plan"],
-    "Creator/UGC": ["We gave 5 college creators Lumora for finals week",
-                    "Creator challenge: study with me + Lumora",
+    "Creator/UGC": ["We gave 5 college creators Athenova for finals week",
+                    "Creator challenge: study with me + Athenova",
                     "POV: your AI tutor won't let you skip the hard part"],
-    "Promo/discount": ["Back-to-school: 30% off Lumora Pro annual",
+    "Promo/discount": ["Back-to-school: 30% off Athenova Pro annual",
                        "Free 14-day Pro trial ends Sunday",
                        "Student plan: first month $1"],
     "Thought leadership": ["What 2,000 teachers told us about AI in the classroom",
                            "Webinar: responsible AI tutoring in K-12",
                            "AI should explain, not answer: our pedagogy principles"],
-    "Trust & privacy": ["Your data is yours: how Lumora protects student privacy",
+    "Trust & privacy": ["Your data is yours: how Athenova protects student privacy",
                         "We never train our AI on student work. Here is the proof.",
                         "Live Q&A with our Chief Privacy Officer"],
 }

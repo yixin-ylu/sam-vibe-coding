@@ -1,6 +1,6 @@
 """Demo 6a: audience-specific ad copy with brand and compliance guardrails (Gemini, free tier).
 
-Lumora sells to three audiences with different motivations: students (save time,
+Athenova sells to three audiences with different motivations: students (save time,
 less stress), parents (results, safety, value) and educators (pedagogy, privacy,
 classroom fit). The prompt template encodes the brief: audience insight, platform
 rules, and compliance rules (no unsubstantiated efficacy claims, which the FTC
@@ -49,13 +49,13 @@ PLATFORM_RULES = {
 COMPLIANCE = """- Do NOT promise specific grade or score improvements ("raise your grade", "guaranteed A").
 - Do NOT invent statistics, testimonials, prices, or dates that are not given in the brief.
 - Do NOT address children under 13.
-- Privacy claims must be limited to this approved fact: "Lumora does not use student work to train its AI models."
-- Lumora explains concepts step by step; never present it as a way to get homework answers."""
+- Privacy claims must be limited to this approved fact: "Athenova does not use student work to train its AI models."
+- Athenova explains concepts step by step; never present it as a way to get homework answers."""
 
 
 def brief(segment: str, platform: str, offer: str | None) -> str:
     return (
-        "You are a senior copywriter for Lumora, an AI-tutoring app (Lumora Pro launch, back-to-school campaign).\n"
+        "You are a senior copywriter for Athenova, an AI-tutoring app (Athenova Pro launch, back-to-school campaign).\n"
         f"Audience: {AUDIENCE[segment]}.\n"
         f"Platform: {platform}. Format rules: {PLATFORM_RULES[platform]}.\n"
         f"Offer: {offer or 'free 14-day Pro trial'}.\n"

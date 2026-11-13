@@ -1,7 +1,7 @@
 # From business goal to user stories to prompts
 
 ## 1. Business goal
-_Example: "Help Lumora's CMO decide how to allocate a $400k campaign extension across channels and audiences."_
+_Example: "Help Athenova's CMO decide how to allocate a $400k campaign extension across channels and audiences."_
 
 ## 2. User stories
 `As a <role>, I want <capability>, so that <business value>.`

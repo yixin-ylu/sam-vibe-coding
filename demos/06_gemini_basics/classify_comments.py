@@ -63,7 +63,7 @@ class Label(BaseModel):
 def classify(client, texts: list[str]) -> list[Label]:
     from google.genai import types
     numbered = "\n".join(f"{i}. {t}" for i, t in enumerate(texts))
-    prompt = ("These are social-media comments on ads for Lumora, an AI-tutoring app. For each comment give "
+    prompt = ("These are social-media comments on ads for Athenova, an AI-tutoring app. For each comment give "
               "sentiment, the main topic, and needs_reply=true if the brand's community team should respond "
               "(questions, complaints, or misinformation). Use the comment number as id.\n\n" + numbered)
     response = client.models.generate_content(

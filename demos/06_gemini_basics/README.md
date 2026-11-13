@@ -1,6 +1,6 @@
 # Demo 6: AI features with Google Gemini (free tier)
 
-Two **simple** AI features built on the Lumora case:
+Two **simple** AI features built on the Athenova case:
 
 | Script | What it shows |
 |---|---|

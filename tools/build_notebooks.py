@@ -26,7 +26,7 @@ if not os.path.exists("data/campaign_posts.csv"):
 !pip -q install -r requirements.txt
 print("Ready ✔  working folder:", os.getcwd())"""
 
-CASE = ("> **Case: Lumora** (fictional) is an AI-tutoring startup running *Learn Smarter*, a 12-week, "
+CASE = ("> **Case: Athenova** (fictional) is an AI-tutoring startup running *Learn Smarter*, a 12-week, "
         "$1.2M back-to-school campaign on TikTok, Instagram, YouTube and LinkedIn, aimed at **students** "
         "(users), **parents** (payers) and **educators** (B2B school licenses). All data is synthetic.")
 
@@ -123,8 +123,8 @@ NOTEBOOKS = {
                "Then critique it: is every claim approved?"),
         ("code", "import sys, os; sys.path.insert(0, 'demos')\nfrom keys import require_key\nfrom google import genai\n"
                  "client = genai.Client(api_key=require_key('GEMINI_API_KEY', 'https://aistudio.google.com/apikey'))\n"
-                 "prompt = ('Draft a 3-sentence public statement for Lumora, an AI-tutoring app, responding to a viral rumour '\n"
-                 "          'that it trains its AI on student homework. Approved fact: Lumora does not use student work to train its AI. '\n"
+                 "prompt = ('Draft a 3-sentence public statement for Athenova, an AI-tutoring app, responding to a viral rumour '\n"
+                 "          'that it trains its AI on student homework. Approved fact: Athenova does not use student work to train its AI. '\n"
                  "          'Tone: calm, transparent, no defensiveness. Offer a live Q&A with the Chief Privacy Officer.')\n"
                  "print(client.models.generate_content(model=os.environ.get('GEMINI_MODEL', 'gemini-flash-latest'), contents=prompt).text)"),
     ],
