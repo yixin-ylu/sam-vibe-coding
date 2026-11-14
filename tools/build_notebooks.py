@@ -27,7 +27,7 @@ if not os.path.exists("data/campaign_posts.csv"):
 print("Ready ✔  working folder:", os.getcwd())"""
 
 CASE = ("> **Case: Smiley** (fictional) is an AI-tutoring startup running *Learn Smarter*, a 12-week, "
-        "$1.2M back-to-school campaign on TikTok, Instagram, YouTube and LinkedIn, aimed at **students** "
+        "$60,000 back-to-school campaign on TikTok, Instagram, YouTube and LinkedIn, aimed at **students** "
         "(users), **parents** (payers) and **educators** (B2B school licenses). All data is synthetic.")
 
 KEY_HELP = """**API keys: never paste them into code.** In Colab, click the 🔑 **Secrets** icon in the left
@@ -132,7 +132,7 @@ NOTEBOOKS = {
         ("md", "# Demo 7: a campaign-strategy agent with the Claude API\n{badge}\n\n" + CASE + "\n\n"
                "Claude is given **nine tools** (Python functions over the campaign data). It decides which to call, "
                "then writes a memo to the CMO: channel economics, the privacy incident, the A/B test verdict, and a "
-               "$400k budget reallocation. Every tool call is printed so you can audit it. A run costs roughly "
+               "$20k budget reallocation. Every tool call is printed so you can audit it. A run costs roughly "
                "$0.15–$0.60; the exact cost is printed at the end."),
         ("md", KEY_HELP.format(name="ANTHROPIC_API_KEY", url="https://platform.claude.com")),
         ("code", SETUP),

@@ -10,7 +10,7 @@ assistants in plain English.
 
 ## The case
 
-**Smiley** (fictional) is an AI-tutoring startup running **"Learn Smarter"**, a 12-week, **$1.2M** back-to-school
+**Smiley** (fictional) is an AI-tutoring startup running **"Learn Smarter"**, a 12-week, **$60,000** back-to-school
 campaign on TikTok, Instagram, YouTube and LinkedIn aimed at **students** (users), **parents** (payers) and
 **educators** (B2B school licenses). The synthetic data hides graduate-level questions to uncover: CPA vs. CAC vs.
 B2B pipeline, a student-data privacy incident in week 7, diminishing returns from overspending, and an A/B test with
@@ -26,7 +26,7 @@ a compliance catch. → [`data/README.md`](data/README.md)
 | 4 | Weekly report + alerts | Are we on budget? What broke this week? | none | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yixin-ylu/sam-vibe-coding/blob/main/notebooks/04_automation.ipynb) |
 | 5 | Sentiment & issue warning | Did the privacy rumour hurt us? | none | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yixin-ylu/sam-vibe-coding/blob/main/notebooks/05_sentiment.ipynb) |
 | 6 | Ad copy & comment classification | Compliant copy per audience; what are people complaining about? | **Gemini (free)** | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yixin-ylu/sam-vibe-coding/blob/main/notebooks/06_gemini_basics.ipynb) |
-| 7 | Campaign-strategy agent | How should we spend the next $400k? | **Claude** | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yixin-ylu/sam-vibe-coding/blob/main/notebooks/07_claude_agent.ipynb) |
+| 7 | Campaign-strategy agent | How should we spend the next $20k? | **Claude** | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yixin-ylu/sam-vibe-coding/blob/main/notebooks/07_claude_agent.ipynb) |
 
 Demos 1–5 need no account and no key. Demo 6 needs a free Gemini key; Demo 7 needs a Claude key
 (about $0.15–$0.60 per run). Keys go in Colab's 🔑 **Secrets** panel, never in code.

@@ -242,7 +242,7 @@ Write the final memo in Markdown for the CMO with these sections:
 6. Risks, assumptions and measurement plan
 Keep it under 900 words."""
 
-DEFAULT_GOAL = ("The board approved a 4-week extension with $400,000 of paid media. How should we "
+DEFAULT_GOAL = ("The board approved a 4-week extension with $20,000 of paid media. How should we "
                 "allocate it across platforms, audiences and content, and what did we learn from "
                 "the privacy incident and the A/B test?")
 

@@ -9,7 +9,7 @@ for high-school and college students. For the 2026 back-to-school season the com
 | | |
 |---|---|
 | Dates | 12 weeks, Mon Aug 3 – Sun Oct 25, 2026 |
-| Paid-media plan | **$1.2M** ($100k/week: TikTok $35k, Instagram $30k, YouTube $20k, LinkedIn $15k) |
+| Paid-media plan | **$60,000** ($5,000/week: TikTok $1,750, Instagram $1,500, YouTube $1,000, LinkedIn $750) |
 | Audiences | **Students** (users), **Parents** (payers), **Educators** (B2B school licenses) |
 | Funnel | impressions → clicks → 14-day free trials → paying subscribers; on LinkedIn also → school demo requests |
 | Economics (assumptions) | $96 first-year revenue per subscriber; $1,500 expected pipeline value per school demo request |
@@ -27,8 +27,8 @@ for high-school and college students. For the 2026 back-to-school season the com
 
 | File | Rows | One row per… | Key columns |
 |---|---:|---|---|
-| `campaign_posts.csv` | 299 | post (organic or paid) | `posted_at, week, platform, segment, pillar, format, paid, spend_usd, impressions, clicks, likes, comments, shares, video_views, trials, paid_conversions, demo_requests, revenue_usd, pipeline_usd, followers, caption` |
-| `campaign_comments.csv` | 2,192 | public comment | `post_id, platform, segment, commented_at, text` |
+| `campaign_posts.csv` | 284 | post (organic or paid) | `posted_at, week, platform, segment, pillar, format, paid, spend_usd, impressions, clicks, likes, comments, shares, video_views, trials, paid_conversions, demo_requests, revenue_usd, pipeline_usd, followers, caption` |
+| `campaign_comments.csv` | 1,496 | public comment | `post_id, platform, segment, commented_at, text` |
 | `budget_plan.csv` | 48 | week × platform | `planned_spend_usd` |
 | `ab_test.csv` | 28 | day × variant | `variant, hook, impressions, clicks, trials` |
 

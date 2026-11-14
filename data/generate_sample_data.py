@@ -2,7 +2,8 @@
 Generate the synthetic case dataset used by every SAM demo.
 
 CASE: Smiley (a FICTIONAL AI-tutoring startup) runs "Learn Smarter", a 12-week,
-$1.2M back-to-school campaign (Aug 3 - Oct 25, 2026) to launch Smiley Pro.
+$60,000 back-to-school campaign (Aug 3 - Oct 25, 2026) to launch Smiley Pro.
+Smiley is a seed-stage startup: about $5,000 a week of paid media.
 
   Audiences : Students (B2C users), Parents (B2C payers), Educators (B2B school licenses)
   Channels  : TikTok, Instagram, YouTube, LinkedIn, organic + paid
@@ -33,7 +34,7 @@ import random
 from datetime import datetime, timedelta
 from pathlib import Path
 
-SEED = 2026
+SEED = 2127
 OUT = Path(__file__).resolve().parent
 START = datetime(2026, 8, 3)          # Monday, week 1
 WEEKS = 12
@@ -43,16 +44,16 @@ PIPELINE_PER_DEMO = 1500.0            # expected value of a school demo request:
 
 PLATFORMS = {
     # followers, weekly growth, segment mix, CPM $, base CTR, click->trial, base engagement rate
-    "TikTok":    dict(followers=12000, growth=0.060, seg={"Students": .85, "Parents": .15},
+    "TikTok":    dict(followers=3000, growth=0.060, seg={"Students": .85, "Parents": .15},
                       cpm=9.0,  ctr=.0110, c2t=.070, eng=.055),
-    "Instagram": dict(followers=18000, growth=0.030, seg={"Students": .50, "Parents": .50},
+    "Instagram": dict(followers=4500, growth=0.030, seg={"Students": .50, "Parents": .50},
                       cpm=11.0, ctr=.0090, c2t=.060, eng=.035),
-    "YouTube":   dict(followers=6000,  growth=0.040, seg={"Students": .55, "Parents": .45},
+    "YouTube":   dict(followers=1200,  growth=0.040, seg={"Students": .55, "Parents": .45},
                       cpm=14.0, ctr=.0070, c2t=.090, eng=.025),
-    "LinkedIn":  dict(followers=5000,  growth=0.025, seg={"Educators": 1.0},
+    "LinkedIn":  dict(followers=1500,  growth=0.025, seg={"Educators": 1.0},
                       cpm=45.0, ctr=.0055, c2t=.020, eng=.020),
 }
-WEEKLY_BUDGET = {"TikTok": 35000, "Instagram": 30000, "YouTube": 20000, "LinkedIn": 15000}
+WEEKLY_BUDGET = {"TikTok": 1750, "Instagram": 1500, "YouTube": 1000, "LinkedIn": 750}
 TRIAL_TO_PAID = {"Students": .05, "Parents": .22, "Educators": .08}
 DEMO_RATE = .040                      # LinkedIn clicks -> school demo requests
 
@@ -247,9 +248,9 @@ def main() -> None:
     ab = []
     for day in range(14):
         date = (START + timedelta(weeks=3, days=day)).date().isoformat()
-        for variant, hook, ctr, c2t in (("A", "Save 5 hours of homework a week", .0110, .074),
-                                        ("B", "Go from a B to an A this semester", .0123, .061)):
-            imp = int(rng.gauss(42000, 3000))
+        for variant, hook, ctr, c2t in (("A", "Save 5 hours of homework a week", .0110, .080),
+                                        ("B", "Go from a B to an A this semester", .0123, .058)):
+            imp = int(rng.gauss(9000, 700))
             clicks = sum(1 for _ in range(imp) if rng.random() < ctr)
             trials = sum(1 for _ in range(clicks) if rng.random() < c2t)
             ab.append({"date": date, "variant": variant, "hook": hook, "impressions": imp,

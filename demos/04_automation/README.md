@@ -4,12 +4,13 @@
 
 - spend vs. **budget plan** per channel, plus cumulative pacing to date
 - trials, CPA, customers, CAC and school demo requests, with week-over-week change
-- **alerts**: overspend > 10%, CPA/CAC up > 25%, and a **trust signal** when parent or educator conversion drops > 30%
+- **alerts**: overspend > 10%, CPA/CAC up > 40% vs the previous 3 weeks, and a **trust signal** when parent or educator conversion drops > 30%
+- a **minimum-volume guard**: a startup's weekly numbers are small (often around 10 customers per channel), so rules only fire when there is enough data
 - writes `reports/weekly_report_wkNN.md` and `.html`; optionally posts the alerts to Slack (`SLACK_WEBHOOK_URL`)
 
 ```bash
-python demos/04_automation/weekly_report.py --week 7    # privacy incident: trust alerts fire
-python demos/04_automation/weekly_report.py --week 10   # TikTok 60% over plan, CAC up 81%
+python demos/04_automation/weekly_report.py --week 7    # privacy incident: parent conversion down 45%
+python demos/04_automation/weekly_report.py --week 10   # TikTok 60% over plan, CAC up 64%
 ```
 
 ## Three ways to schedule it

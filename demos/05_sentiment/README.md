@@ -4,7 +4,7 @@
 python demos/05_sentiment/sentiment.py
 ```
 
-- Scores all 2,192 campaign comments with **VADER** (or, if VADER isn't installed, a transparent word list).
+- Scores all 1,496 campaign comments with **VADER** (or, if VADER isn't installed, a transparent word list).
 - Tracks weekly **net sentiment** (share positive minus share negative), overall and by segment, and flags sharp drops.
 - Tags issue topics with **keyword rules** (privacy, pricing, cheating, bugs, efficacy).
 - Week 7: parent and educator sentiment turns negative, and "privacy" dominates the complaints. That is the viral

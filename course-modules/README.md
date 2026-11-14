@@ -2,7 +2,7 @@
 
 The full SAM course is 14 weeks, but each piece also works on its own. Below are drop-in modules
 that other GWSB courses can adopt **without** turning into a programming course.
-Every module runs in Google Colab with no installation and uses the same case, Smiley's $1.2M EdTech launch campaign (`data/README.md`), so instructors can mix modules freely.
+Every module runs in Google Colab with no installation and uses the same case, Smiley's $60,000 EdTech launch campaign (`data/README.md`), so instructors can mix modules freely.
 
 | Module | Length | Fits courses like… | Notebooks | Students leave with |
 |---|---|---|---|---|

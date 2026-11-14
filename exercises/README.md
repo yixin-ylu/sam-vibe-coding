@@ -127,7 +127,7 @@ Review a teammate's module with `templates/peer_review_rubric.md`.
 ## Weeks 13–14 · Demo Day & portfolio
 
 **Exercise 8.1: Board presentation (7 minutes)**
-Recommend how to allocate the $400k extension. Show the live dashboard, one thing the AI got wrong and how you caught it, and the measurement plan.
+Recommend how to allocate the $20k extension. Show the live dashboard, one thing the AI got wrong and how you caught it, and the measurement plan.
 
 **Exercise 8.2: Portfolio README**
 Use `templates/portfolio_readme.md`: screenshot, live link, tech stack, *your* role versus the AI's role.

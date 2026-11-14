@@ -34,7 +34,7 @@ elif media == "Organic only":
 f = df[mask]
 
 st.title("📊 Smiley · Learn Smarter campaign")
-st.caption("Fictional AI-tutoring startup · 12 weeks · $1.2M plan · synthetic data · built with AI-assisted 'vibe coding'")
+st.caption("Fictional AI-tutoring startup · 12 weeks · $60k plan · synthetic data · built with AI-assisted 'vibe coding'")
 
 if f.empty:
     st.warning("No posts match the current filters.")

@@ -5,7 +5,7 @@ The step up from Demo 6: instead of one prompt and one answer, Claude gets **nin
 until it can write a memo to the CMO.
 
 ```
-"How should we spend the $400k extension?"
+"How should we spend the $20k extension?"
    └─► Claude ─► campaign_overview()            ─► facts & assumptions
               ─► channel_economics()            ─► CPA vs CAC vs pipeline
               ─► spend_response("TikTok")       ─► diminishing returns after week 9

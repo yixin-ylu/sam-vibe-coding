@@ -6,8 +6,11 @@ and .html. If SLACK_WEBHOOK_URL is set, it also posts the alerts to Slack.
 
 Alert rules (edit them in RULES):
   • overspend: channel spend > plan by more than 10%
-  • CPA / CAC up more than 25% week over week
+  • CPA / CAC up more than 40% vs the average of the previous 3 weeks
   • trust signal: Parents or Educators conversion (trials per 1k clicks) down > 30%
+    vs the previous 3 weeks
+A startup's weekly numbers are small, so a rule only fires when there is enough volume
+(MIN_VOLUME); otherwise a single lost customer could trigger an alert.
 
 Usage:
     python demos/04_automation/weekly_report.py
@@ -32,7 +35,8 @@ ROOT = Path(__file__).resolve().parents[2]
 POSTS = ROOT / "data" / "campaign_posts.csv"
 PLAN = ROOT / "data" / "budget_plan.csv"
 OUT = ROOT / "reports"
-RULES = {"overspend": 0.10, "cost_jump": 0.25, "trust_drop": -0.30}
+RULES = {"overspend": 0.10, "cost_jump": 0.40, "trust_drop": -0.30, "baseline_weeks": 3}
+MIN_VOLUME = {"CPA": 30, "CAC": 8, "clicks": 300}   # trials, customers, clicks in the current week
 
 
 def _div(a, b):
@@ -58,12 +62,6 @@ def channel_week(df: pd.DataFrame, plan: pd.DataFrame) -> pd.DataFrame:
     return g
 
 
-def segment_week(df: pd.DataFrame) -> pd.DataFrame:
-    s = df.groupby(["week", "segment"])[["clicks", "trials"]].sum().reset_index()
-    s["trials_per_1k_clicks"] = s.trials / s.clicks * 1000
-    return s
-
-
 def build_report(df: pd.DataFrame, plan: pd.DataFrame, week: int | None) -> tuple[str, list[str]]:
     cw = channel_week(df, plan)
     week = week or int(cw.week.max())
@@ -71,24 +69,33 @@ def build_report(df: pd.DataFrame, plan: pd.DataFrame, week: int | None) -> tupl
         raise SystemExit("Pick week 2 or later (need a previous week to compare).")
     cur = cw[cw.week == week].set_index("platform")
     prev = cw[cw.week == week - 1].set_index("platform")
+    k = RULES["baseline_weeks"]
+    base = cw[cw.week.between(week - k, week - 1)].groupby("platform")[["spend", "trials", "customers"]].sum()
+    base["CPA"] = base.spend / base.trials.where(base.trials > 0)
+    base["CAC"] = base.spend / base.customers.where(base.customers > 0)
 
     alerts = []
     for p, r in cur.iterrows():
         if r.pacing > RULES["overspend"]:
             alerts.append(f"💸 {p}: spend ${r.spend:,.0f} is {r.pacing:+.0%} vs plan (${r.planned_spend_usd:,.0f})")
-        for metric in ("CPA", "CAC"):
-            change = _div(r[metric], prev.loc[p, metric]) - 1 if p in prev.index else float("nan")
-            if change > RULES["cost_jump"] and p != "LinkedIn":
-                alerts.append(f"📈 {p}: {metric} up {change:.0%} (${prev.loc[p, metric]:,.0f} → ${r[metric]:,.0f})")
-    sw = segment_week(df)
+        for metric, volume in (("CPA", r.trials), ("CAC", r.customers)):
+            if p == "LinkedIn" or p not in base.index or volume < MIN_VOLUME[metric]:
+                continue
+            change = _div(r[metric], base.loc[p, metric]) - 1
+            if change > RULES["cost_jump"]:
+                alerts.append(f"📈 {p}: {metric} up {change:.0%} vs the previous {k} weeks "
+                              f"(${base.loc[p, metric]:,.0f} → ${r[metric]:,.0f})")
+    s = df.groupby(["week", "segment"])[["clicks", "trials"]].sum().reset_index()
     for seg in ("Parents", "Educators"):
-        a = sw[(sw.week == week) & (sw.segment == seg)].trials_per_1k_clicks
-        b = sw[(sw.week == week - 1) & (sw.segment == seg)].trials_per_1k_clicks
-        if len(a) and len(b):
-            ch = a.iloc[0] / b.iloc[0] - 1
-            if ch < RULES["trust_drop"]:
-                alerts.append(f"⚠️ {seg}: conversion down {abs(ch):.0%} week over week "
-                              f"({b.iloc[0]:.0f} → {a.iloc[0]:.0f} trials per 1k clicks). Check comments for a trust issue.")
+        now = s[(s.week == week) & (s.segment == seg)]
+        before = s[s.week.between(week - k, week - 1) & (s.segment == seg)]
+        if now.empty or before.empty or now.clicks.iloc[0] < MIN_VOLUME["clicks"]:
+            continue
+        a = now.trials.iloc[0] / now.clicks.iloc[0] * 1000
+        b = before.trials.sum() / before.clicks.sum() * 1000
+        if a / b - 1 < RULES["trust_drop"]:
+            alerts.append(f"⚠️ {seg}: conversion down {1 - a / b:.0%} vs the previous {k} weeks "
+                          f"({b:.0f} → {a:.0f} trials per 1k clicks). Check comments for a trust issue.")
 
     to_date = cw[cw.week <= week]
     spent, planned = to_date.spend.sum(), to_date.planned_spend_usd.sum()
