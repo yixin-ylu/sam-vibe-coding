@@ -1,9 +1,9 @@
-"""Demo 5: comment sentiment + issue early warning for the Athenova campaign.
+"""Demo 5: comment sentiment + issue early warning for the Smiley campaign.
 
 Scores every comment in data/campaign_comments.csv, tracks weekly *net sentiment*
 (share positive minus share negative) per audience segment, tags simple issue topics
 with keyword rules, and flags weeks where sentiment drops sharply. In this dataset,
-that is week 7, when a viral post alleged Athenova trained its AI on student data.
+that is week 7, when a viral post alleged Smiley trained its AI on student data.
 
 Engine: VADER (pip install vaderSentiment) if installed, otherwise a transparent
 word list, so the demo always runs. Demo 6b repeats the job with an LLM; comparing

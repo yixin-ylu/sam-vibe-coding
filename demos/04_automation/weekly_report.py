@@ -93,7 +93,7 @@ def build_report(df: pd.DataFrame, plan: pd.DataFrame, week: int | None) -> tupl
     to_date = cw[cw.week <= week]
     spent, planned = to_date.spend.sum(), to_date.planned_spend_usd.sum()
     lines = [
-        f"# Athenova campaign: weekly report, week {week} of 12",
+        f"# Smiley campaign: weekly report, week {week} of 12",
         f"_Budget to date: ${spent:,.0f} spent vs ${planned:,.0f} planned ({spent / planned - 1:+.1%})._",
         "",
         "| Channel | Spend | vs plan | Trials | CPA | Δ CPA | Customers | CAC | Demo req. |",
@@ -136,14 +136,14 @@ def to_html(md: str) -> str:
            "h1,h2{color:#005581}table{border-collapse:collapse;width:100%}"
            "th{background:#005581;color:#fff}td,th{padding:6px 10px;border-bottom:1px solid #ddd;"
            "text-align:right}td:first-child,th:first-child{text-align:left}")
-    return f"<!doctype html><meta charset='utf-8'><title>Athenova weekly report</title><style>{css}</style>" + "\n".join(body)
+    return f"<!doctype html><meta charset='utf-8'><title>Smiley weekly report</title><style>{css}</style>" + "\n".join(body)
 
 
 def notify_slack(alerts: list[str]) -> None:
     url = os.environ.get("SLACK_WEBHOOK_URL")
     if not url or not alerts:
         return
-    data = json.dumps({"text": "Athenova campaign alerts:\n" + "\n".join(alerts)}).encode()
+    data = json.dumps({"text": "Smiley campaign alerts:\n" + "\n".join(alerts)}).encode()
     urllib.request.urlopen(urllib.request.Request(url, data=data, headers={"Content-Type": "application/json"}),
                            timeout=10)
     print("alerts sent to Slack")

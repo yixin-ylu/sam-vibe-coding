@@ -1,7 +1,7 @@
 # Demo 7: a campaign-strategy agent (Claude API, tool use)
 
 The step up from Demo 6: instead of one prompt and one answer, Claude gets **nine tools**
-(ordinary Python functions over the Athenova data) and decides on its own which to call, in what order,
+(ordinary Python functions over the Smiley data) and decides on its own which to call, in what order,
 until it can write a memo to the CMO.
 
 ```

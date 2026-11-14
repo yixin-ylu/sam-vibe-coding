@@ -23,7 +23,7 @@ python demos/04_automation/weekly_report.py --week 10   # TikTok 60% over plan, 
 ```powershell
 $a = New-ScheduledTaskAction -Execute "python" -Argument "demos\04_automation\weekly_report.py" -WorkingDirectory "C:\path\to\sam-vibe-coding"
 $t = New-ScheduledTaskTrigger -Weekly -DaysOfWeek Monday -At 8am
-Register-ScheduledTask -TaskName "Athenova weekly report" -Action $a -Trigger $t
+Register-ScheduledTask -TaskName "Smiley weekly report" -Action $a -Trigger $t
 ```
 
 **In the cloud: GitHub Actions.** See `.github/workflows/weekly-report.yml`. It is set to manual (`workflow_dispatch`)

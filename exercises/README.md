@@ -1,6 +1,6 @@
-# SAM exercises (14 weeks): the Athenova case
+# SAM exercises (14 weeks): the Smiley case
 
-All exercises use the **Athenova "Learn Smarter" campaign** (see [`data/README.md`](../data/README.md)).
+All exercises use the **Smiley "Learn Smarter" campaign** (see [`data/README.md`](../data/README.md)).
 Each one has **a prompt starter**, **acceptance criteria** (how you know you're done), and a
 **verify and reflect** step for your Prompt Engineering Journal (`templates/prompt_journal.md`).
 Everything runs in Google Colab. Open the matching notebook in `notebooks/` first.
@@ -35,7 +35,7 @@ Revenue in the data is *first-year only*. Assume monthly churn of 6% after year 
 
 **Exercise 2.1: Competitor benchmark** (`notebooks/02_collect_data.ipynb`)
 Find two public **education or EdTech organisation** accounts on Bluesky and compare posting cadence and engagement per post.
-- ✅ Table for both accounts. ✅ One recommendation for Athenova's organic strategy.
+- ✅ Table for both accounts. ✅ One recommendation for Smiley's organic strategy.
 
 **Exercise 2.2: Read the docs, not just the AI**
 Find `getAuthorFeed` in the Bluesky API docs. Which parameter limits page size, and what is its maximum?
@@ -134,4 +134,4 @@ Use `templates/portfolio_readme.md`: screenshot, live link, tech stack, *your* r
 
 **Exercise 8.3: Responsible-AI checklist**
 Complete the checklist in `templates/user_story_template.md` for your final product, including the student-data
-privacy questions (FERPA/COPPA) that the Athenova case raises.
+privacy questions (FERPA/COPPA) that the Smiley case raises.
